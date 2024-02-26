@@ -1,5 +1,7 @@
 <img src="utils/1.png" width= 100%>
 
+---
+
 ## Introduction
 
 Ce premier module de C++ couvre les bases essentielles de la programmation orientée objet, en se concentrant sur les classes, les objets, et les fonctions membres. Nous apprenons également à manipuler les entrées/sorties via les stdio streams, à initialiser des objets avec des listes d'initialisation, et à utiliser les mots-clés ```static``` et ```const```. Ce module constitue une introduction fondamentale au C++, posant les bases nécessaires pour des études plus approfondies et le développement de projets complexes.
