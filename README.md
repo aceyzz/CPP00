@@ -10,6 +10,9 @@ Ce premier module de C++ couvre les bases essentielles de la programmation orien
 
 ## Exercice 00 - Megaphone
 
+<details>
+  <summary>Afficher/Masquer</summary>
+
 L'exercice consiste a imprimer sur la sortie standard la ou les chaines de caractères passées en argument du programme.
 
 [Lien ici](https://github.com/aceyzz/CPP00/tree/main/ex00)
@@ -24,10 +27,15 @@ Si au moins un argument est passé à la ligne de commande (autre que le nom du 
 
 En résumé, ce programme convertit tous les arguments de la ligne de commande en majuscules et les imprime. Si aucun argument n'est fourni, il imprime un message d'erreur spécifique.
 
+</details>
+
 <br>
 
 
 ## Exercice 01 - My Awesome Phonebook
+
+<details>
+  <summary>Afficher/Masquer</summary>
 
 L'exercice consiste à créer un Phonebook de 8 contacts, en implementant 3 fonctionnalités : 
 
@@ -75,9 +83,14 @@ L'affichage du phonebook doit avoir un formattage précis (voir sujet).
 
 ```main```: le point d'entrée du programme. Elle crée un carnet d'adresses et entre dans une boucle qui attend les commandes de l'utilisateur. L'utilisateur peut ajouter un contact avec la commande ```ADD```, rechercher un contact avec la commande ```SEARCH``` ou quitter le programme avec la commande ```EXIT```.
 
+</details>
+
 <br>
 
 ## Exercice 02 - L'emploi de mes rêves (Bonus)
+
+<details>
+  <summary>Afficher/Masquer</summary>
 
 Dans cet exercice, le sujet nous fournit les fichiers contenant une classe ```Account```, un programme de test et un fichier ```.log``` contenant l'output attendu. Notre objectif est de recréer les fonctions membres de la classe afin d'obtenir le même output que le fichier ```.log```.
 
@@ -102,6 +115,8 @@ Dans la méthode ```makeDeposit(int deposit)```, le montant du dépôt est ajout
 Dans la méthode ```makeWithdrawal(int withdrawal)```, si le retrait est possible (c'est-à-dire si le solde du compte est suffisant et si le montant du retrait est positif), le montant du retrait est soustrait du solde du compte et les variables statiques appropriées sont mises à jour. Un message est affiché pour indiquer que le retrait a été effectué. Si le retrait n'est pas possible, un message est affiché pour indiquer que le retrait a été refusé.
 
 Le meilleur moyen de checker si l'output de mon implémenation et celui donné dans l'énoncé est de faire une redirection de la sortie de mon programme vers un nouveau fichier.log (```./programme > fichier.log```), puis de faire une commande ```diff``` en ignorant bien entendu les timestamps (qui seront systematiquement différent de l'exemple) et l'ordre dans lequel les destructors sont appelés.
+
+</details>
 
 <br>
 
