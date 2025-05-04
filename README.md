@@ -1,6 +1,13 @@
-<img src="utils/1.png" width= 100%>
+<img src="git_utils/banner.png" width= 100%>
+
+<br>
 
 ---
+
+<br>
+
+<details>
+<summary>FRENCH VERSION</summary>
 
 ## Introduction
 
@@ -122,4 +129,138 @@ Le meilleur moyen de checker si l'output de mon implémenation et celui donné d
 
 ## Résultat
 
-<img src="utils/100.png" width= 25%>
+<img src="git_utils/100.png" width= 25%>
+
+</details>
+
+<br>
+
+---
+
+<br>
+
+<details>
+<summary>ENGLISH VERSION</summary>
+
+## Introduction
+
+This first C++ module covers the essential basics of object-oriented programming, focusing on classes, objects, and member functions. We also learn how to handle input/output via stdio streams, initialize objects with initializer lists, and use the keywords ```static``` and ```const```. This module serves as a fundamental introduction to C++, laying the groundwork for further studies and the development of complex projects.
+
+<br>
+
+## Exercise 00 - Megaphone
+
+<details>
+	<summary>Show/Hide</summary>
+
+The exercise consists of printing to the standard output the string(s) passed as arguments to the program.
+
+[Link here](https://github.com/aceyzz/CPP00/tree/main/ex00)
+
+### My Implementation
+
+The function ```print_upper_str``` takes a string as input and prints it in uppercase. It iterates through each character of the string and uses the ```toupper``` function to convert the character to uppercase before printing it.
+
+The ```main``` function is the program's entry point. It takes two arguments: ```argc```, which is the number of command-line arguments, and ```argv```, which is an array of strings representing the command-line arguments.
+
+If at least one argument is passed to the command line (other than the program's name itself), the main function calls ```print_upper_str``` for each argument and prints the string in uppercase. If no arguments are passed, it prints the string ```* LOUD AND UNBEARABLE FEEDBACK NOISE *```.
+
+In summary, this program converts all command-line arguments to uppercase and prints them. If no arguments are provided, it prints a specific error message.
+
+</details>
+
+<br>
+
+## Exercise 01 - My Awesome Phonebook
+
+<details>
+	<summary>Show/Hide</summary>
+
+The exercise consists of creating a Phonebook with 8 contacts, implementing 3 functionalities:
+
+- ```ADD```: Add a contact
+- ```SEARCH```: Search for a contact at a specific index
+- ```EXIT```: Exit the program
+
+<br>
+
+The Phonebook must be able to store, for each contact, the following fields:
+
+- First name
+- Last name
+- Nickname
+- Phone number
+- Darkest secret
+
+<br>
+
+The Phonebook display must follow a precise formatting (see subject).
+
+[Link here](https://github.com/aceyzz/CPP00/tree/main/ex01)
+
+### My Implementation
+
+```cleanInput```: Cleans a string by removing leading and trailing spaces.
+
+```is_digit```: Checks if a string consists only of digits.
+
+```isEmptyLine```: Checks if a string is empty or contains only spaces.
+
+```validateInput``` and ```validateInputNbr```: Prompt the user to enter a string and validate the input. If the input is invalid, an error message is displayed, and the user is prompted to enter it again.
+
+```shiftContact```: Shifts all contacts up by one index to make room for a new contact, ensuring new contacts are always at the first index.
+
+```addContact```: Prompts the user to enter the details of a new contact and adds it to the address book.
+
+```drawHeader```: Displays the header of the contact table.
+
+```printContacts```: Displays all contacts in a table format.
+
+```askIndex```: Prompts the user to enter the index of a contact to search for and displays the contact's details.
+
+```searchContact```: Displays all contacts and prompts the user to choose a contact to search for.
+
+```main```: The program's entry point. It creates an address book and enters a loop waiting for user commands. The user can add a contact with the ```ADD``` command, search for a contact with the ```SEARCH``` command, or exit the program with the ```EXIT``` command.
+
+</details>
+
+<br>
+
+## Exercise 02 - My Dream Job (Bonus)
+
+<details>
+	<summary>Show/Hide</summary>
+
+In this exercise, the subject provides files containing a class ```Account```, a test program, and a ```.log``` file with the expected output. Our goal is to recreate the member functions of the class to produce the same output as the ```.log``` file.
+
+[Link here](https://github.com/aceyzz/CPP00/tree/main/ex02)
+
+### My Implementation
+
+Static variables: ```g_index```, ```_nbAccounts```, ```_totalAmount```, ```_totalNbDeposits```, ```_totalNbWithdrawals```. These variables are used to track the account index, the total number of accounts, the total amount across all accounts, the total number of deposits, and the total number of withdrawals.
+
+```Account::Account(int initial_deposit)```: This constructor initializes an account with an initial deposit, updates the appropriate static variables, and displays a message indicating that the account has been created.
+
+```Account::~Account(void)```: This destructor displays a message indicating that the account has been closed.
+
+```_displayTimestamp(void)```: This private static method displays the current time in the format ```[YYYYMMDD_HHMMSS]```.
+
+```getNbAccounts(void)```, ```getTotalAmount(void)```, ```getNbDeposits(void)```, ```getNbWithdrawals(void)```, ```displayAccountsInfos(void)```: These public static methods respectively return the total number of accounts, the total amount across all accounts, the total number of deposits, the total number of withdrawals, and display information about all accounts.
+
+```makeDeposit(int deposit)```, ```makeWithdrawal(int withdrawal)```, ```checkAmount(void) const```, ```displayStatus(void) const```: These public non-static methods allow depositing money into the account, withdrawing money from the account, checking the current account balance, and displaying the current account status, respectively.
+
+In the ```makeDeposit(int deposit)``` method, the deposit amount is added to the account balance, and the appropriate static variables are updated. A message is displayed to indicate that the deposit has been made.
+
+In the ```makeWithdrawal(int withdrawal)``` method, if the withdrawal is possible (i.e., the account balance is sufficient and the withdrawal amount is positive), the withdrawal amount is subtracted from the account balance, and the appropriate static variables are updated. A message is displayed to indicate that the withdrawal has been made. If the withdrawal is not possible, a message is displayed to indicate that the withdrawal was refused.
+
+The best way to check if the output of my implementation matches the one provided in the subject is to redirect the program's output to a new ```.log``` file (```./program > file.log```), then use the ```diff``` command while ignoring timestamps (which will always differ from the example) and the order in which destructors are called.
+
+</details>
+
+<br>
+
+## Result
+
+<img src="git_utils/100.png" width= 25%>
+
+</details>
